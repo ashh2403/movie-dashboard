@@ -1,0 +1,31 @@
+# CinemaScope Intelligence theme (deep cinema navy, warm gold accent)
+# Colours are also defined in src/charts.py so charts and widgets match.
+[theme]
+base = "dark"
+primaryColor = "#FFB547"
+backgroundColor = "#0B1020"
+secondaryBackgroundColor = "#1B2850"
+textColor = "#F5F7FF"
+font = "Inter, 'Segoe UI', system-ui, sans-serif"
+headingFont = "Manrope, Inter, 'Segoe UI', system-ui, sans-serif"
+baseRadius = "0.75rem"
+buttonRadius = "0.6rem"
+borderColor = "#26365F"
+dataframeBorderColor = "#26365F"
+dataframeHeaderBackgroundColor = "#151F3D"
+showWidgetBorder = true
+linkColor = "#FFB547"
+greenColor = "#72D6AD"
+chartCategoricalColors = ["#FFB547", "#FF7657", "#72D6AD", "#9C8CFF", "#5AB8F0", "#8A93B8"]
+
+[theme.sidebar]
+backgroundColor = "#0D1530"
+secondaryBackgroundColor = "#151F3D"
+borderColor = "#22305A"
+
+[server]
+headless = true
+runOnSave = true
+
+[browser]
+gatherUsageStats = false

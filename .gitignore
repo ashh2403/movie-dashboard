@@ -1,0 +1,16 @@
+# Local Python environment and caches
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Editor / assistant settings
+.vscode/
+.claude/
+
+# Personal working files (not part of the delivered project)
+Niha-ppt.pptx
+pt1_nityasri.pdf
+results_slides-Asmika.pptx
+reference.jpeg
