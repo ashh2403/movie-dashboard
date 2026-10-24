@@ -1,0 +1,128 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "620d3fce76a78bd9fbef",
+  "position": {
+    "x": 20,
+    "y": 10,
+    "z": 0,
+    "width": 760,
+    "height": 80,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "RATINGS ",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "24pt",
+                      "color": "#F5F7FF",
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": "& ",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "24pt",
+                      "color": "#FF7657",
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": "BUDGET",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "24pt",
+                      "color": "#F5F7FF",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "How audiences rate movies, and which genres return the most on their budget",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "10pt",
+                      "color": "#A9B8D8"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#26365F'"
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,213 @@
+table Movies
+	lineageTag: b65469b7-c04e-55db-b002-1c9e3c6734f8
+
+	measure 'Total Movies' = COUNTROWS(Movies)
+		formatString: #,0
+		lineageTag: 480f3d12-5b1a-53b2-86c1-5b91d5bccb0b
+
+	measure 'Total Revenue' = SUM(Movies[Revenue])
+		formatString: #,0
+		lineageTag: 9d10b07b-7193-5b30-a2f4-261f58a0b8b1
+
+	measure 'Total Budget' = SUM(Movies[Budget])
+		formatString: #,0
+		lineageTag: 4a98b2cb-9734-5894-86a2-b769ad6dcd39
+
+	measure 'Total Profit' = [Total Revenue] - [Total Budget]
+		formatString: #,0
+		lineageTag: 86994c39-738a-5a9d-a98c-2f72fee6ee83
+
+	measure 'Sum of Rating Score' = SUM(Movies[Rating Score])
+		formatString: #,0.0
+		lineageTag: 75b77be9-f5ed-559d-b05e-01695f9f4c02
+
+	measure 'Average Rating' = AVERAGE(Movies[Rating Score])
+		formatString: 0.00
+		lineageTag: fe5bfd05-461b-5b52-83d2-519d5745b18e
+
+	measure 'Average Revenue' = AVERAGE(Movies[Revenue])
+		formatString: #,0
+		lineageTag: a6a0008f-91b2-5c3a-a0c9-0df1212e9744
+
+	measure 'Revenue per Budget' = DIVIDE([Total Revenue], [Total Budget])
+		formatString: 0.00"x"
+		lineageTag: 6e014d78-0c11-5a3a-862f-e9f3bd873c4e
+
+	measure 'Median ROI' = MEDIANX(FILTER(Movies, Movies[Budget] > 0), DIVIDE(Movies[Revenue] - Movies[Budget], Movies[Budget]))
+		formatString: 0%
+		lineageTag: 8939d97f-3108-54bd-90f2-4ab0302aada2
+
+	measure 'Average Revenue (10+ movies)' = IF([Total Movies] >= 10, [Average Revenue])
+		formatString: #,0
+		lineageTag: b3d61ac8-fd5b-5cf0-8010-ce8ac0c4ebbe
+
+	measure 'Average Rating (10+ movies)' = IF([Total Movies] >= 10, [Average Rating])
+		formatString: 0.00
+		lineageTag: fe03a77c-0e4b-5903-b15b-6f1fe869380a
+
+	measure 'Average Rating (5+ movies)' = IF([Total Movies] >= 5, [Average Rating])
+		formatString: 0.00
+		lineageTag: 06f9a1f9-f15c-5dce-b7c7-60205f05edef
+
+	measure 'Median ROI (10+ movies)' = IF([Total Movies] >= 10, [Median ROI])
+		formatString: 0%
+		lineageTag: aa000e4a-6c1e-5df4-9415-f40c57d2d8e3
+
+	column 'Movie Title'
+		dataType: string
+		lineageTag: 4ff7a53c-5a85-5c8b-8351-e94c16713382
+		summarizeBy: none
+		sourceColumn: Movie Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column Genre
+		dataType: string
+		lineageTag: e968fb66-5c44-557e-8ebb-f644f37a8d69
+		summarizeBy: none
+		sourceColumn: Genre
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Release Year'
+		dataType: int64
+		formatString: 0
+		lineageTag: 763f0a87-4e29-5f05-8066-3c5140fc7eed
+		summarizeBy: none
+		sourceColumn: Release Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Revenue
+		dataType: int64
+		formatString: #,0
+		lineageTag: 83c8ac08-f626-5557-8019-a9988c7ba9fa
+		summarizeBy: sum
+		sourceColumn: Revenue
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Rating Score'
+		dataType: double
+		formatString: 0.0
+		lineageTag: 0c1964b7-9584-5556-b3aa-ca34c46f0025
+		summarizeBy: average
+		sourceColumn: Rating Score
+
+		annotation SummarizationSetBy = Automatic
+
+	column Director
+		dataType: string
+		lineageTag: 0b1371d9-e7c1-5947-aa34-12bec4136a3c
+		summarizeBy: none
+		sourceColumn: Director
+
+		annotation SummarizationSetBy = Automatic
+
+	column Star
+		dataType: string
+		lineageTag: a4358d9f-c801-59d0-9a76-8aebd6fa550e
+		summarizeBy: none
+		sourceColumn: Star
+
+		annotation SummarizationSetBy = Automatic
+
+	column Budget
+		dataType: int64
+		formatString: #,0
+		lineageTag: 48b39a21-fb41-545f-a9ad-3760dfac3fbe
+		summarizeBy: sum
+		sourceColumn: Budget
+
+		annotation SummarizationSetBy = Automatic
+
+	column Votes
+		dataType: int64
+		formatString: #,0
+		lineageTag: ee0c8673-e214-581b-b5b1-c86f73dea74a
+		summarizeBy: sum
+		sourceColumn: Votes
+
+		annotation SummarizationSetBy = Automatic
+
+	column Runtime
+		dataType: int64
+		formatString: 0
+		lineageTag: e9675aa0-1085-5eed-bda4-31b932d8696e
+		summarizeBy: average
+		sourceColumn: Runtime
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: ad94b9c7-8bc6-5854-a6b0-2ceddf036526
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column Company
+		dataType: string
+		lineageTag: 5caac6ee-a320-59cd-849d-aadb00937f80
+		summarizeBy: none
+		sourceColumn: Company
+
+		annotation SummarizationSetBy = Automatic
+
+	column Released
+		dataType: string
+		lineageTag: 6db1c791-948b-5c6d-aaff-c7ac08f98416
+		summarizeBy: none
+		sourceColumn: Released
+
+		annotation SummarizationSetBy = Automatic
+
+	column Writer
+		dataType: string
+		lineageTag: 7229ed5e-c9e7-53a6-a008-0da0a94f78c5
+		summarizeBy: none
+		sourceColumn: Writer
+
+		annotation SummarizationSetBy = Automatic
+
+	column Certificate
+		dataType: string
+		lineageTag: 9bba5377-a54e-5bcc-9218-6a495d145699
+		summarizeBy: none
+		sourceColumn: Certificate
+
+		annotation SummarizationSetBy = Automatic
+
+	column Profit
+		dataType: int64
+		formatString: #,0
+		lineageTag: 43cbea99-0f37-5b65-ab9d-e71244160ef8
+		summarizeBy: sum
+		sourceColumn: Profit
+
+		annotation SummarizationSetBy = Automatic
+
+	column Decade
+		dataType: string
+		lineageTag: 98bf0f7c-e7b5-515e-835f-fcbeb993b6c7
+		summarizeBy: none
+		sourceColumn: Decade
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Movies = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(Web.Contents(DataUrl), [Delimiter = ",", Columns = {"Movie Title", "Genre", "Release Year", "Revenue", "Rating Score", "Director", "Star", "Budget", "Votes", "Runtime", "Country", "Company", "Released", "Writer", "Certificate"}, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    #"Removed Header Row" = Table.Skip(Source, 1),
+				    #"Trimmed Text" = Table.TransformColumns(#"Removed Header Row", {{"Movie Title", Text.Trim, type text}, {"Genre", Text.Trim, type text}, {"Director", Text.Trim, type text}, {"Star", Text.Trim, type text}, {"Country", Text.Trim, type text}, {"Company", Text.Trim, type text}, {"Released", Text.Trim, type text}, {"Writer", Text.Trim, type text}, {"Certificate", Text.Trim, type text}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Trimmed Text", {{"Release Year", Int64.Type}, {"Revenue", Int64.Type}, {"Rating Score", type number}, {"Budget", Int64.Type}, {"Votes", Int64.Type}, {"Runtime", Int64.Type}}, "en-US"),
+				    #"Merged Unrated" = Table.ReplaceValue(#"Changed Type", "Unrated", "Not Rated", Replacer.ReplaceValue, {"Certificate"}),
+				    #"Added Profit" = Table.AddColumn(#"Merged Unrated", "Profit", each [Revenue] - [Budget], Int64.Type),
+				    #"Added Decade" = Table.AddColumn(#"Added Profit", "Decade", each Text.From(Number.IntegerDivide([Release Year], 10) * 10) & "s", type text)
+				in
+				    #"Added Decade"
+
+	annotation PBI_ResultType = Table

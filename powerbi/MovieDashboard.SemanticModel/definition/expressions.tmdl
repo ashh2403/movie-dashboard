@@ -1,0 +1,5 @@
+/// Web address of the movie CSV. Change it here (Transform data > Edit parameters) to use another copy.
+expression DataUrl = "https://raw.githubusercontent.com/ashh2403/movie-dashboard/main/data/cleaned_data_final.csv" meta [IsParameterQuery = true, Type = "Text", IsParameterQueryRequired = true]
+	lineageTag: c34c32bf-6ba9-58a2-8bdd-238c9f836144
+
+	annotation PBI_ResultType = Text

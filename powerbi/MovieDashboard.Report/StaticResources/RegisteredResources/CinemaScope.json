@@ -1,0 +1,135 @@
+{
+  "name": "CinemaScope",
+  "dataColors": [
+    "#FF7657",
+    "#FFB547",
+    "#5AB8F0",
+    "#9C8CFF",
+    "#72D6AD",
+    "#5E6B91",
+    "#F28FB1",
+    "#C9D66B",
+    "#4FC1C9",
+    "#E0A96D"
+  ],
+  "background": "#151F3D",
+  "foreground": "#F5F7FF",
+  "tableAccent": "#FFB547",
+  "good": "#72D6AD",
+  "neutral": "#FFB547",
+  "bad": "#FF7657",
+  "textClasses": {
+    "title": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 12,
+      "color": "#F5F7FF"
+    },
+    "header": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 12,
+      "color": "#F5F7FF"
+    },
+    "label": {
+      "fontFace": "Segoe UI",
+      "fontSize": 9,
+      "color": "#A9B8D8"
+    },
+    "callout": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 24,
+      "color": "#F5F7FF"
+    }
+  },
+  "visualStyles": {
+    "page": {
+      "*": {
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#0B1020"
+              }
+            },
+            "transparency": 0
+          }
+        ],
+        "outspace": [
+          {
+            "color": {
+              "solid": {
+                "color": "#0B1020"
+              }
+            },
+            "transparency": 0
+          }
+        ]
+      }
+    },
+    "*": {
+      "*": {
+        "background": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#151F3D"
+              }
+            },
+            "transparency": 0
+          }
+        ],
+        "title": [
+          {
+            "fontColor": {
+              "solid": {
+                "color": "#F5F7FF"
+              }
+            }
+          }
+        ],
+        "categoryAxis": [
+          {
+            "labelColor": {
+              "solid": {
+                "color": "#A9B8D8"
+              }
+            },
+            "titleColor": {
+              "solid": {
+                "color": "#A9B8D8"
+              }
+            }
+          }
+        ],
+        "valueAxis": [
+          {
+            "labelColor": {
+              "solid": {
+                "color": "#A9B8D8"
+              }
+            },
+            "titleColor": {
+              "solid": {
+                "color": "#A9B8D8"
+              }
+            },
+            "gridlineColor": {
+              "solid": {
+                "color": "#26365F"
+              }
+            }
+          }
+        ],
+        "legend": [
+          {
+            "labelColor": {
+              "solid": {
+                "color": "#F5F7FF"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

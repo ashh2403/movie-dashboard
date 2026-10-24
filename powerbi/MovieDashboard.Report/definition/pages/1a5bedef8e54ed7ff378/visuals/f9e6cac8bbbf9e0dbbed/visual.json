@@ -1,0 +1,128 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "f9e6cac8bbbf9e0dbbed",
+  "position": {
+    "x": 20,
+    "y": 10,
+    "z": 0,
+    "width": 760,
+    "height": 80,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "MOVIE INDUSTRY ",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "24pt",
+                      "color": "#F5F7FF",
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": "PERFORMANCE ",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "24pt",
+                      "color": "#FF7657",
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": "DASHBOARD",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "24pt",
+                      "color": "#F5F7FF",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Revenue, budget and audience insights across 5,421 movies released 1980–2020 · nominal US dollars",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "10pt",
+                      "color": "#A9B8D8"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#26365F'"
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

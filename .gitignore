@@ -9,6 +9,9 @@ __pycache__/
 .vscode/
 .claude/
 
+# Built ZIP for the client (re-create it from the powerbi/ folder)
+MovieDashboard_PowerBI.zip
+
 # Personal working files (not part of the delivered project)
 Niha-ppt.pptx
 pt1_nityasri.pdf

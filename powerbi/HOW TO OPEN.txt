@@ -1,0 +1,12 @@
+MOVIE INDUSTRY PERFORMANCE DASHBOARD - POWER BI
+
+1. Unzip this folder first (right-click the ZIP > Extract All). Do not open it from inside the ZIP.
+   Keep it in a short location, e.g. Desktop or Documents.
+2. Install Power BI Desktop (free) from the Microsoft Store if you do not have it.
+3. Double-click MovieDashboard.pbip. Keep the two folders next to it - they belong together.
+4. If Power BI asks how to connect to the web data, choose 'Anonymous' and click 'Connect'.
+   The movie data is downloaded from the internet, so stay online.
+5. Optional: File > Save as > choose .pbix to keep everything in one file.
+
+Pages: Overview, Ratings & Budget, Movie Explorer. Use the Genre, Certificate and
+Release year filters at the top of each page.
